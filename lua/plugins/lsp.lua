@@ -228,6 +228,7 @@ return {
 			templ = {},
 			ts_ls = {},
 			volar = {},
+			yamlls = {},
 		}
 		-- Ensure the servers and tools above are installed
 		--
@@ -251,6 +252,7 @@ return {
 			"prettier",
 			"prettierd",
 			"stylua",
+			"yamllint",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

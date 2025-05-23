@@ -224,10 +224,11 @@ return {
 			},
 			marksman = {},
 			pylsp = {},
+			rust_analyzer = {},
 			tailwindcss = {},
 			templ = {},
 			ts_ls = {},
-			volar = {},
+			vue_ls = {},
 			yamlls = {},
 		}
 		-- Ensure the servers and tools above are installed

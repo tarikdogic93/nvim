@@ -49,6 +49,7 @@ return {
 				"regex",
 				"requirements",
 				"robots",
+				"rust",
 				"scss",
 				"sql",
 				"svelte",

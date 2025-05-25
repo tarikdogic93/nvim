@@ -201,6 +201,8 @@ return {
 		local servers = {
 			bashls = {},
 			cssls = {},
+			dockerls = {},
+			docker_compose_language_service = {},
 			-- clangd = {},
 			-- pyright = {},
 			-- rust_analyzer = {},

@@ -7,6 +7,9 @@ vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true -- Keep identation from previous line
 
+-- This will ensure usage of the system clipboard for all yank, delete, change, and put operations
+vim.opt.clipboard = "unnamedplus"
+
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -48,10 +51,10 @@ vim.opt.scrolloff = 5
 
 -- Highlight text for some time after yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("YankHighlight", { clear = true}),
-  pattern = "*",
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  desc = "Highlight yank",
+	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	desc = "Highlight yank",
 })

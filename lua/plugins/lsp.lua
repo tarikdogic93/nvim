@@ -229,6 +229,7 @@ return {
 			marksman = {},
 			pylsp = {},
 			rust_analyzer = {},
+			svelte = {},
 			tailwindcss = {},
 			templ = {},
 			ts_ls = {},

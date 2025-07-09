@@ -58,3 +58,19 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 	desc = "Highlight yank",
 })
+
+-- Disable netrw at the very start to avoid conflicts
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- Open nvim-tree automatically on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		local buf = vim.api.nvim_get_current_buf()
+		local ft = vim.api.nvim_buf_get_option(buf, "filetype")
+
+		if ft == "" or ft == "netrw" then
+			require("nvim-tree.api").tree.open()
+		end
+	end,
+})
